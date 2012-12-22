@@ -1,1 +1,10 @@
+Dijit/Timeline-js Integration
+=====================
+
+This is an integration of Timeline-js with dojo's dijit widget system.
+
+
+License
+-------
+
 see http://ouhouhsami.github.com/timeline-js/
