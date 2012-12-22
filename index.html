@@ -1,84 +1,77 @@
----
-layout: layout
-title: Dijit timeline-js
-js: ['http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js', 'https://raw.github.com/fryn/html5slider/master/html5slider.js', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js', 'http://pastebin.com/raw.php?i=8ugkXxth', 'static/js/timeline.js', 'static/js/index.js']
-css: ['http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/blitzer/jquery-ui.css']
----
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Timeline-dijit by websemantics</title>
 
-<div class="content">
-	<h2>About</h2>
-	<p>
-	<i>timeline-dijit</i> is a javascript library for timeline representation of &lt;audio /&gt; or &lt;video /&gt; HTML5 tag.
-	
-	<br />
-	<b>! You must read the examples with Firefox. This is not a library limitation, but only a codec limitation : examples use OGG files from wikimedia.</b>
-	</p>
-	
-	<div id="player">
-	<div style="float:left">
-		<button id="stop"></button>
-		<button id="play"></button>
-		<button id="pause"></button>
-	</div>
-	<div style="float:right;" >
-	<div id="sound_visualisation"></div>
-	<div style="font-size:0.7em" id="slider-range"></div>
-	<div style="display:none">
-	<label for="scale">Scale</label>
-	<input type="range" min="1" step="0.01" id="scale" value="1" />
-	<label for="scroll">Scroll</label>
-	<input type="range" min="0"  step="0.01" id="scroll" value="0" />
-	</div>
-	</div>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Timeline-dijit</h1>
+        <p class="header">Javascript library for audio/video timeline navigation as Dijit Widget</p>
 
-	<div style="clear:both"></div>
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/websemantics/timeline-dijit/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/websemantics/timeline-dijit/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/websemantics/timeline-dijit">View On GitHub</a></li>
+        </ul>
 
-	</div>
-	<audio id="audio" >
-		<source src="http://ulysses.ircam.fr/upload/tmp/Vampire_3component.mp4" type="audio/mp4">
-		<source src="http://upload.wikimedia.org/wikipedia/commons/b/bb/Vampire_3component.ogg" type="audio/ogg">
-	</audio>
-	
-	<h3>Features</h3>
-	 
-	<ul>
-	<li>The timeline representation shows a graduate scale of time.</li>
-	<li>The timeline has scale and scroll possibilities that can be bound to range input.</li>
-	<li>The timeline can have multiple tracks, and on each track, you can assign markers or periods.</li>
-	<li>The periods can have an alternative <i>bubble</i> view.</li>
-	<li>Elements on the timeline can be edited (create, read, update, delete)</li>
-	<li>Live possibilities for modifying the timeline (add markers, periods, tracks may be)</li>
-	</ul>
-	
-	<h3>Examples</h3>
-	
-	<ul>
-		<li><a href="basic-example.html">Basic audio example</a></li>
-		<li><a href="basic-example-w-scale-scroll.html">Basic example with scale and scroll</a></li>
-		<li><a href="skin-example.html">How to skin the timeline</a></li>
-		<li><a href="marker-and-period-example.html">Add Markers and Periods to a timeline</a></li>
-		<li><a href="basic-video-example.html">Video example with periods</a></li>
-		<li><a href="multitrack-example.html">Multitrack example</a></li>
-		<li><a href="bubble-example.html">Bubble view</a></li>
-		<li><a href="v2t.html">V2T Bubble example</a></li>
-		<li><a href="jquery-ui.html">jQuery UI integration example</a></li>
-		<li><a href="edit.html">Edit mode example (Create, Read, Update, Delete example)</a></li>
-		<li><a href="live.html">Live options example</a></li>
-		<li><a href="form.html">Form link example</a></li>
-	</ul>
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/websemantics">websemantics</a></p>
 
-	<h3>Documentation</h3>
-	
-	<p>jsdoc (http://code.google.com/p/jsdoc-toolkit/) can generate documentation for the library.</p>
-  <!--
-	<div class="related">
-    <ul>
-      {% for post in site.posts %}
-      <li>
-	<span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-	-->
-</div>
+
+      </header>
+      <section>
+        <h3>Welcome to GitHub Pages.</h3>
+
+<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+
+<pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre>
+
+<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+
+<h3>Designer Templates</h3>
+
+<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+
+<h3>Rather Drive Stick?</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
+<h3>Authors and Contributors</h3>
+
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+
+<h3>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-37237128-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
