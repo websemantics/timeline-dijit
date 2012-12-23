@@ -9,11 +9,21 @@
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    
+    <link rel="stylesheet" href="../../_static/js/dojo/../dijit/themes/claro/claro.css">
+	<style type="text/css">
+		#borderContainer {
+		    width: 650px;
+		    height: 100px;
+		}
+	</style>
+	<script>dojoConfig = {parseOnLoad: true}</script><script src='../../_static/js/dojo/dojo.js'></script><script>require(["dojo/parser", "dijit/layout/ContentPane", "dijit/layout/BorderContainer"]);</script>
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body class="claro">
     <div class="wrapper">
       <header>
       	<h1 class="header">Timeline-dijit</h1>
@@ -47,6 +57,10 @@ Timeline-dijit is a Dijit Widget for timeline representation of &lt;audio /&gt; 
 Read the examples with Chrome or Firefox. This is not a library limitation, but only a codec limitation : examples use OGG files from wikimedia.
 </p>
 
+    <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'sidebar', gutters:true, liveSplitters:true" id="borderContainer">
+    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'leading'" style="width: 100px;">Hi, I'm leading pane</div>
+    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'center'">Hi, I'm center pane</div>
+    
 <pre><code>$ cd your_repo_root/repo_name
 $ git fetch origin
 $ git checkout gh-pages
