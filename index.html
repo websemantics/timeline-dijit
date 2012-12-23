@@ -11,11 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.8.1/dijit/themes/claro/claro.css">
-	<style type="text/css">
-		#borderContainer {
-		    width: 650px;
-		    height: 100px;
-		}
 	</style>
 	<script>
 		dojoConfig= {
@@ -38,7 +33,8 @@
                     var master = new BorderContainer({
                     	design:'sidebar', 
                     	gutters:true, 
-                    	liveSplitters:true
+                    	liveSplitters:true,
+                    	style:"width:600px;height:100px;"
                     },"example_1");
                     
                      var left = new ContentPane({
