@@ -28,7 +28,34 @@
 		};
 	</script>
 	<script src="//ajax.googleapis.com/ajax/libs/dojo/1.8.1/dojo/dojo.js"></script>
-	<script>require(["dojo/parser", "dijit/layout/ContentPane", "dijit/layout/BorderContainer"]);</script>
+	<script>
+	require(["dojo/parser", "dijit/layout/ContentPane", "dijit/layout/BorderContainer"]);
+		
+                    // Applications Tree section 
+                    var master = new BorderContainer({
+                    	design:'sidebar', 
+                    	gutters:true, 
+                    	liveSplitters:true
+                    },"example_1");
+
+                    
+                     var left = new ContentPane({
+                     	 region:'leading',
+                     	 splitter:true,
+                     	 style:"width: 100px;",
+                     	 content:"Hi, I'm leading pane"
+                     });
+                                          
+                     var right = new ContentPane({
+                     	 region:'center',
+                     	 splitter:true,
+                     	 content:"Hi, I'm center pane"
+                     });
+                     
+                     master.addChild(left);
+                     master.addChild(right);
+		
+	</script>
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -68,9 +95,7 @@ Timeline-dijit is a Dijit Widget for timeline representation of &lt;audio /&gt; 
 Read the examples with Chrome or Firefox. This is not a library limitation, but only a codec limitation : examples use OGG files from wikimedia.
 </p>
 
-    <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'sidebar', gutters:true, liveSplitters:true" id="borderContainer">
-    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'leading'" style="width: 100px;">Hi, I'm leading pane</div>
-    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'center'">Hi, I'm center pane</div>
+    <div id="example_1"></div>
     
 <pre><code>$ cd your_repo_root/repo_name
 $ git fetch origin
