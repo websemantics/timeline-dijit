@@ -29,9 +29,11 @@
 	</script>
 	<script src="//ajax.googleapis.com/ajax/libs/dojo/1.8.1/dojo/dojo.js"></script>
 	<script>
-	require(["dojo/parser", "dijit/layout/ContentPane", "dijit/layout/BorderContainer"]);
-		
-                    // Applications Tree section 
+	require([ "dojo/ready", "dijit/layout/ContentPane", "dijit/layout/BorderContainer"],
+            function(ready, ContentPane, BorderContainer) {
+
+                // Start when the dom is ready
+                ready(function() {
                     var master = new BorderContainer({
                     	design:'sidebar', 
                     	gutters:true, 
@@ -54,6 +56,10 @@
                      
                      master.addChild(left);
                      master.addChild(right);
+                     
+               	  }
+                }
+              );
 		
 	</script>
 
