@@ -34,12 +34,12 @@
 
                 // Start when the dom is ready
                 ready(function() {
+               	    console.log('On Ready');
                     var master = new BorderContainer({
                     	design:'sidebar', 
                     	gutters:true, 
                     	liveSplitters:true
                     },"example_1");
-
                     
                      var left = new ContentPane({
                      	 region:'leading',
