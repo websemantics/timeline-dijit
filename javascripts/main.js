@@ -3,7 +3,8 @@
  * and open the template in the editor.
  */
 
-require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dijit/layout/ContentPane", "dijit/layout/BorderContainer", "javascripts/Timeline.js"],
+require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", 
+"dijit/layout/ContentPane", "dijit/layout/BorderContainer", "https://raw.github.com/websemantics/timeline-dijit/master/lib/timeline.js"],
         function(ready, on, dom, lang, domStyle, ContentPane, BorderContainer, Timeline) {
 
             // Start when the dom is ready
