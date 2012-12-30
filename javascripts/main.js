@@ -93,14 +93,14 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
                 var left = new ContentPane({
                     region: 'leading',
                     splitter: true,
-                    class: "unselectable",
+                    class: "unselectable left_panel",
                     content: lang.replace(buttons_content, {id: id}) + lang.replace(media_content, {id: id})
                 });
 
                 var right = new ContentPane({
                     region: 'center',
                     splitter: true,
-                    class: "unselectable",
+                    class: "unselectable left_panel",
                 });
 
                 right.addChild(timeline);
