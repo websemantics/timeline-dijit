@@ -24,9 +24,9 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
 
 
             var buttons_content = '<div id="{id}_buttons" style="padding:0;margin:0">\
-                                            <button id="play"></button>\
-                                            <button id="pause"></button>\
-                                            <button id="stop"></button>\
+                                            <button id="{id}_play"></button>\
+                                            <button id="{id}_pause"></button>\
+                                            <button id="{id}_stop"></button>\
                                             </div>';
 
             function loadExample(id) {
@@ -83,14 +83,14 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
                 var left = new ContentPane({
                     region: 'leading',
                     splitter: true,
-                    class: "unselectable left_panel",
+                    class: "left_panel",
                     content: lang.replace(buttons_content, {id: id}) + lang.replace(media_content, {id: id})
                 });
 
                 var right = new ContentPane({
                     region: 'center',
                     splitter: true,
-                    class: "unselectable right_panel",
+                    class: "right_panel",
                 });
 
                 right.addChild(timeline);
@@ -106,9 +106,9 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
                     timeline.ready(duration, audioNode);
                 });
 
-                var play_button = dom.byId('play');
-                var stop_button = dom.byId('stop');
-                var pause_button = dom.byId('pause');
+                var play_button = dom.byId(id+'_play');
+                var stop_button = dom.byId(id+'_stop');
+                var pause_button = dom.byId(id+'_pause');
 
                 hide(pause_button);
                 // Button events
