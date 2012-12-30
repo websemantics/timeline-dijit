@@ -9,7 +9,7 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
             // Start when the dom is ready
             ready(function() {
                 loadExample("main_example");
-                //loadExample("bubble_example");
+                loadExample("bubble_example");
                 
             });
             /*
