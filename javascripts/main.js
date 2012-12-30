@@ -8,7 +8,9 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
 
             // Start when the dom is ready
             ready(function() {
-                loadMainExample("main_example");
+                loadExample("main_example");
+                loadExample("bubble_example");
+                
             });
             /*
              var media_content = '<audio id="{id}_audio">\
@@ -27,20 +29,10 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
                                             <button id="stop"></button>\
                                             </div>';
 
-            function loadMainExample(id) {
-                /*
-                 var options = {
-                 numberOfTracks: 3,
-                 periodShape: 'bubble',
-                 height: 210,
-                 backgroundColor: '#EAE5E1',
-                 trackSeparatorColor: 'transparent',
-                 scaleColor: '#EAE5E1',
-                 cursorHeight: 30
-                 };
-                 */
-
-                var options = {
+            function loadExample(id) {
+               var options = null;
+               if(id == 'main_example') {
+                options = {
                     height: 100,
                     width: 750,
                     highlightStroke: null, /* New: Stroke highlight periods/markers when within time needle range */
@@ -63,15 +55,32 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
                 timeline.addPeriod(7, 13, '#CF423C', 2, 'Oxford');
                 timeline.addPeriod(12, 25, '#7A1631', 3, 'Toronto');
                 timeline.addPeriod(23, 28, '#CF423C', 1, 'San Francisco');
+               } else 
+               if(id =='bubble_example') {
+                  options = {
+                    height: 100,
+                    width: 750,
+                    highlightStroke: null, /* New: Stroke highlight periods/markers when within time needle range */
+                    highlightFill: '#aeaeae', /* New: Fill color highlight periods/markers when within time needle range */
+                    scaleBackgroundColor: '#a50000',
+                    scaleColor: '#ccc',
+                    backgroundColor: '#E7E2DE',
+                    scaleLabelColor: '#fff',
+                    textLabel: {color: '#eee', align: "middle", padding: 5},
+                    cursorColor: '#000',
+                    maxScaleFactor: 1,
+                    numberOfTracks: 3,
+                    focusFill: '#333333',
+                    //periodShape: 'bubble',
+                    cursorHeight: 100};
 
-                /*
-                 timeline.addPeriod(0, 30, '#3F0B1B', 3);
-                 timeline.addPeriod(5, 30, '#7A1631', 2);
-                 timeline.addPeriod(5, 15, '#FC7D49', 1);
-                 timeline.addPeriod(0, 5, '#FC7D49', 1);
-                 timeline.addPeriod(15, 25, '#FC7D49', 1);
-                 timeline.addPeriod(25, 30, '#CF423C', 1);
-                 */
+                var timeline = new Timeline(options);
+
+                timeline.addPeriod(5, 12, '#7A1631', 1, 'London');
+                timeline.addPeriod(7, 13, '#CF423C', 2, 'Oxford');
+                timeline.addPeriod(12, 25, '#7A1631', 3, 'Toronto');
+                timeline.addPeriod(23, 28, '#CF423C', 1, 'San Francisco');
+               }
 
                 var master = new BorderContainer({
                     design: 'sidebar',
