@@ -8,7 +8,9 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
 
             // Start when the dom is ready
             ready(function() {
+                    if(dom.byId('main_example'))
                 loadExample("main_example");
+                    if(dom.byId('bubble_example'))
                 loadExample("bubble_example");
                 
             });
