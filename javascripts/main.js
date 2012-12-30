@@ -31,7 +31,7 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
 
             function loadExample(id) {
                var options = null;
-               if(id == 'main_example1') {
+               if(id == 'main_example') {
                 options = {
                     height: 100,
                     width: 750,
@@ -56,7 +56,7 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
                 timeline.addPeriod(12, 25, '#7A1631', 3, 'Toronto');
                 timeline.addPeriod(23, 28, '#CF423C', 1, 'San Francisco');
                } else 
-               if(id =='main_example') {
+               if(id =='bubble_example') {
                 options = {'numberOfTracks':3, 'periodShape':'bubble', 'height':200,
                 'backgroundColor':'#EAE5E1', 'trackSeparatorColor':'#EAE5E1', 'scaleColor':'#EAE5E1',
                 'cursorHeight':30,
