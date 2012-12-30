@@ -3,11 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="timeline-dijit" content="HTML, JavaScript, Dojo, Dijit, Widget, SVG, VML, Canvas">
+        <meta name="description" content="Dijit Widget for audio/video timeline navigation">
+        <meta name="author" content="Websemantics, Inc.">
+
         <title>Timeline-dijit by Websemantics, Inc.</title>
 
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.8.1/dijit/themes/claro/claro.css">
+        <!-- link rel="stylesheet" href="dijit/themes/claro/claro.css"-->
         <link rel="stylesheet" href="stylesheets/styles.css">
         <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+        
         <script src="javascripts/scale.fix.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -16,15 +22,14 @@
                 has: {
                     "dojo-firebug": true
                 },
+                forceGfxRenderer: 'svg',
                 parseOnLoad: false,
                 foo: "bar",
                 async: true
             };</script>
         <script src="//ajax.googleapis.com/ajax/libs/dojo/1.8.1/dojo/dojo.js"></script>
+       <!--  <script src="dojo/dojo.js"></script -->
         <script src="javascripts/main.js"></script>
-        <script>
-           </script>
-
         <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -36,11 +41,10 @@
                 <p class="header">Dijit Widget for audio/video timeline navigation</p>
                 <ul>
                     <li class="download"><a class="buttons" href="https://github.com/websemantics/timeline-dijit/zipball/master">Download ZIP</a></li>
-                    <li class="download"><a class="buttons" href="https://github.com/websemantics/timeline-dijit/tarball/master">Download TAR</a></li>
                     <li><a class="buttons github" href="https://github.com/websemantics/timeline-dijit">View On GitHub</a></li>
                 </ul>
                 <p>
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <form class="donate" action="https://www.paypal.com/cgi-bin/webscr" method="post">If you find this useful, please consider supporting us.
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
                            ">
@@ -49,13 +53,12 @@
                 </form>
                 </p>
 
-                <p class="header">This project is maintained by <a class="header name" href="http://websemantics.ca">Websemantics, Inc.</a></p>
-
+                <p class="header">Powered by <a id="wslogo" class="header name" href="http://websemantics.ca">Websemantics, Inc.</a></p>
+                
             </header>
             <section>
                 <img style="border:none;margin-left:-10px" src="http://websemantics.ca/timeline-dijit/dijit-timeline-logo.png">
-
-                <p>Timeline-dijit is a Dijit Widget for timeline representation of &lt;audio /&gt; or &lt;video /&gt; HTML5 tag; based on <a href='http://ouhouhsami.github.com/timeline-js/'>timeline-js</a> </p>
+                <p>Timeline-dijit is a lightweight and flexible <a href='http://dojotoolkit.org/'>Dijit</a> Widget for timeline representation of &lt;audio/&gt; or &lt;video/&gt; HTML5 tag; based on <a href='http://ouhouhsami.github.com/timeline-js/'>timeline-js</a>. Timeline-dijit supports SVG, VML and HTML5 Canvas. </p>
                 <div id="main_example" class="example">
                 </div>
                 <p class="comment">
@@ -66,19 +69,27 @@
                 </p>
                 <h3>Features</h3>
 
-                <ul>
                 <li>The Timeline representation shows a graduate scale of time.</li>
                 <li>The Timeline has scale and scroll possibilities that can be bound to range input.</li>
                 <li>The Timeline can have multiple tracks, and on each track, you can assign markers or periods.</li>
                 <li>The periods can have an alternative bubble view.</li>
                 <li>Elements on the Timeline can be edited (create, read, update, delete)</li>
                 <li>Live possibilities for modifying the Timeline (add markers, periods, tracks may be)</li>
+                <li>Features support for SVG, VML and HTML5 Canvas via Dojox <a href='http://dojotoolkit.org/reference-guide/1.8/dojox/gfx.html'>GFX</a> API.<span class="new">&nbsp;</span></li>
                 <li>Resizable at runtime to adapt with Dijit layout managers (BorderContainer).<span class="new">&nbsp;</span></li>
                 <li>Cursor dragging for smooth interaction (can see periods being created). <span class="new">&nbsp;</span></li>
                 <li>Bug fixes: avoid creating periods / markers when the mouse on Scale area. <span class="new">&nbsp;</span></li>
                 <li>New look and feel for enhanced user experience. <span class="new">&nbsp;</span></li>
-                </ul>
+                <li>Major code refactoring into class hierarchy. <span class="new">&nbsp;</span></li>
+                <li>Features Font support. <span class="new">&nbsp;</span></li>
                 
+                <br/>
+                <br/>
+                <pre><code>$ cd your_repo_root/repo_name
+                        $ git fetch origin
+                        $ git checkout gh-pages</code></pre>
+
+
                 <h3>Support or Contact</h3>
 
                 <p>For any questions contact me at <a href="adnan@websemantics.ca">adnan@websemantics.ca</a>.</p>
@@ -98,6 +109,5 @@
             } catch (err) {
             }
         </script>
-
     </body>
 </html>
