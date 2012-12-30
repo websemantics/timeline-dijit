@@ -91,7 +91,7 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
                 }, id);
 
                 var left = new ContentPane({
-                    id: "left_pane",
+                    id: id+"_left_pane",
                     region: 'leading',
                     splitter: true,
                     class: "unselectable",
@@ -99,7 +99,7 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
                 });
 
                 var right = new ContentPane({
-                    id: "right_pane",
+                    id: id+"_right_pane",
                     region: 'center',
                     splitter: true,
                     class: "unselectable",
