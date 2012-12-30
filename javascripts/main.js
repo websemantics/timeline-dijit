@@ -62,7 +62,7 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
                 options = {'numberOfTracks':3, 'periodShape':'bubble', 'height':200,
                 'backgroundColor':'#EAE5E1', 'trackSeparatorColor':null, 'scaleColor':'#EAE5E1',
                 'cursorHeight':30, 'highlightFill':null, highlightStroke: {color: '#FF0', width: 3},
-                'highlightTrackFill':none};
+                'highlightTrackFill':null};
 
                 var timeline = new Timeline(options);
                 timeline.addPeriod(0,30,'#3F0B1B',3)
