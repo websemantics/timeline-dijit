@@ -3,17 +3,23 @@
  * and open the template in the editor.
  */
 
-require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dijit/layout/ContentPane", "dijit/layout/BorderContainer", "https://raw.github.com/websemantics/timeline-dijit/master/lib/timeline.js"],
+require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dijit/layout/ContentPane", "dijit/layout/BorderContainer", "javascripts/Timeline.js"],
         function(ready, on, dom, lang, domStyle, ContentPane, BorderContainer, Timeline) {
 
             // Start when the dom is ready
             ready(function() {
                 loadMainExample("main_example");
             });
-
+            /*
+             var media_content = '<audio id="{id}_audio">\
+             <source src="sound/Vampire_3component.ogg" type="audio/ogg">\
+             </audio>';
+             */
             var media_content = '<audio id="{id}_audio">\
-                                            <source src="sound/Vampire_3component.ogg" type="audio/ogg">\
+                            <source src="http://ulysses.ircam.fr/upload/tmp/Vampire_3component.mp4" type="audio/mp4">\
+                           <source src="http://upload.wikimedia.org/wikipedia/commons/b/bb/Vampire_3component.ogg" type="audio/ogg">\
                                             </audio>';
+
 
             var buttons_content = '<div id="{id}_buttons" style="padding:0;margin:0">\
                                             <button id="play"></button>\
@@ -33,7 +39,7 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
                  cursorHeight: 30
                  };
                  */
-                
+
                 var options = {
                     height: 100,
                     width: 750,
@@ -43,7 +49,7 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
                     scaleColor: '#ccc',
                     backgroundColor: '#E7E2DE',
                     scaleLabelColor: '#fff',
-                    textLabel: {color:'#eee', align:"middle", padding: 5},
+                    textLabel: {color: '#eee', align: "middle", padding: 5},
                     cursorColor: '#000',
                     maxScaleFactor: 1,
                     numberOfTracks: 3,
@@ -74,7 +80,7 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
                     liveSplitters: true,
                     style: "padding:10px;margin:5px;width:800px;height:" + (options.height + 20) + "px;"
                 }, id);
-            
+
                 var left = new ContentPane({
                     id: "left_pane",
                     region: 'leading',
