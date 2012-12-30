@@ -58,7 +58,7 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
                } else 
                if(id =='bubble_example') {
                 options = {'numberOfTracks':3, 'periodShape':'bubble', 'height':200,
-                'backgroundColor':'#EAE5E1', 'trackSeparatorColor':'[0,0,0,0]', 'scaleColor':'#EAE5E1',
+                'backgroundColor':'#EAE5E1', 'trackSeparatorColor':null, 'scaleColor':'#EAE5E1',
                 'cursorHeight':30};
 
                 var timeline = new Timeline(options);
