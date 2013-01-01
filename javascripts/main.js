@@ -46,7 +46,7 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
                     textLabel: {color: '#eee', align: "middle", padding: 5},
                     cursorColor: '#000',
                     maxScaleFactor: 1,
-                    numberOfTracks: 3,
+                    numberOfTracks: 7,
                     focusFill: '#333333',
                     //periodShape: 'bubble',
                     cursorHeight: 100};
