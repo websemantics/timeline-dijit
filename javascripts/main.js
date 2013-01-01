@@ -35,7 +35,7 @@ require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style
                var options = null;
                if(id == 'main_example') {
                 options = {
-                    height: 100,
+                    height: 300,
                     width: 750,
                     highlightStroke: null, /* New: Stroke highlight periods/markers when within time needle range */
                     highlightFill: '#aeaeae', /* New: Fill color highlight periods/markers when within time needle range */
