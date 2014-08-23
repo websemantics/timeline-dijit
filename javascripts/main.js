@@ -4,7 +4,7 @@
  */
 
 require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dijit/layout/ContentPane", "dijit/layout/BorderContainer", 
-"timeline.js"],
+"timeline"],
         function(ready, on, dom, lang, domStyle, ContentPane, BorderContainer, Timeline) {
 
             // Start when the dom is ready
