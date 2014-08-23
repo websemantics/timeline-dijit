@@ -4,7 +4,7 @@
  */
 
 require(["dojo/ready", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dijit/layout/ContentPane", "dijit/layout/BorderContainer", 
-"http://raw.githubusercontent.com/websemantics/timeline-dijit/master/lib/timeline.js"],
+"http://raw.githubusercontent.com/websemantics/timeline-dijit/gh-pages/javascripts/timeline.js"],
         function(ready, on, dom, lang, domStyle, ContentPane, BorderContainer, Timeline) {
 
             // Start when the dom is ready
